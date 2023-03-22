@@ -1,0 +1,282 @@
+:root {
+   --black: #0e1011;
+   --black2: hsla(200, 10%, 6%, 0.85);
+   --primary: #41b7e1;
+   --white: #ffffff;
+   --grey: #e7ebee;
+   --color1: #fff9e9;
+   --color2: #fddb7f;
+   --color3: #ff69b4;
+}
+
+@import 'global';
+
+header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   height: 4rem;
+   padding: 0 4rem;
+   background: var(--primary);
+   position: fixed;
+   z-index: 100;
+   left: 0;
+   top: 0;
+   &.show {
+      box-shadow: 0 0 1rem #0e101113;
+   }
+   a {
+      color: var(--grey);
+   }
+   .links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .btn {
+         margin-left: 1.5rem;
+      }
+   }
+   .close {
+      position: absolute;
+      right: 2.4rem;
+      top: 1.25rem;
+   }
+   .close,
+   .menu {
+      color: var(--grey);
+      font-size: 1.125rem;
+      cursor: pointer;
+      display: none;
+   }
+}
+
+.home {
+   background: var(--primary);
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   position: relative;
+   justify-content: space-between;
+   h1 {
+      color: var(--grey);
+      font-size: 4rem;
+      line-height: 1.1;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+   }
+   p {
+      margin-bottom: 1.5rem;
+   }
+   .img {
+      img {
+         max-width: 30rem;
+      }
+   }
+   .mouse {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--primary);
+      box-shadow: 0 0 1rem #0e10116c;
+      border-radius: 50%;
+      color: var(--grey);
+      font-size: 1.25rem;
+      cursor: pointer;
+      bottom: 1rem;
+      left: calc(50% - 2rem);
+      &:hover {
+         transform: rotate(180deg);
+      }
+   }
+}
+
+.guide {
+   display: flex;
+   justify-content: space-between;
+   gap: 2rem;
+   > div {
+      background: var(--color1);
+      border-radius: 2rem;
+   }
+   .text {
+      padding: 3rem;
+      h2 {
+         margin-bottom: 1rem;
+      }
+      p {
+         color: var(--black2);
+         margin-bottom: 1rem;
+      }
+      .stats {
+         display: flex;
+         align-items: center;
+         gap: 1rem;
+         place-items: center;
+         margin-bottom: 2rem;
+         div {
+            position: relative;
+            text-align: center;
+            width: 100%;
+            &:not(:last-child)::before {
+               content: '';
+               position: absolute;
+               width: 2px;
+               height: 50%;
+               right: 0;
+               top: 10%;
+               background: var(--grey);
+            }
+         }
+      }
+   }
+   .img {
+      width: 40%;
+      max-height: 30rem;
+      object-fit: fill;
+      display: flex;
+      align-items: center;
+   }
+   .btns {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .btn {
+         &:first-child {
+            background: var(--black);
+            a {
+               color: var(--white);
+            }
+         }
+         &:last-child {
+            background: var(--grey);
+            a {
+               color: var(--black);
+            }
+         }
+      }
+   }
+}
+
+.about {
+   .btn {
+      border: 1px solid var(--grey);
+   }
+   .step {
+      display: flex;
+      margin-bottom: 6rem;
+      justify-content: space-between;
+      gap: 2rem;
+      &:nth-child(1) {
+         h2 {
+            color: var(--color2);
+         }
+         .img::before {
+            width: 100%;
+            height: 50%;
+            bottom: 0;
+            background: #fddb7f25;
+         }
+      }
+      &:nth-child(2) {
+         flex-direction: row-reverse;
+         h2 {
+            color: var(--primary);
+         }
+         .img::before {
+            width: 100%;
+            height: 50%;
+            bottom: 0;
+            background: #41b6e125;
+         }
+      }
+      &:nth-child(3) {
+         margin-bottom: 0;
+         h2 {
+            color: var(--color3);
+         }
+         .img::before {
+            width: 100%;
+            height: 50%;
+            bottom: 0;
+            background: #ff69b413;
+            z-index: 2;
+         }
+      }
+      div {
+         display: grid;
+         max-width: 20rem;
+         gap: 1rem;
+      }
+      .img {
+         position: relative;
+         width: 20rem;
+         &::before {
+            content: '';
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+         }
+      }
+   }
+}
+
+.subjects {
+   padding: 2rem;
+   .subject-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      .subject {
+         cursor: pointer;
+         border-radius: 1rem;
+         &:hover {
+            box-shadow: 0 0 1rem #0e101113;
+         }
+         .info {
+            padding: 1.5rem;
+            display: grid;
+            .category {
+               display: flex;
+               gap: 0.5rem;
+               margin-bottom: 1rem;
+               span {
+                  font-size: 0.75rem;
+                  text-transform: capitalize;
+                  display: inline-flex;
+                  border-radius: 1rem;
+                  padding: 0.25rem 0.5rem;
+                  cursor: pointer;
+                  font-weight: 500;
+                  &#weekly {
+                     background: #0e101113;
+                  }
+                  &#physics {
+                     background: #4174e125;
+                     color: #4174e1;
+                  }
+                  &#english {
+                     background: #fddb7f25;
+                     color: var(--color2);
+                  }
+                  &#math {
+                     background: #41b6e125;
+                     color: var(--primary);
+                  }
+                  &#chemistry {
+                     background: #ff69b413;
+                     color: var(--color3);
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@import 'media';
