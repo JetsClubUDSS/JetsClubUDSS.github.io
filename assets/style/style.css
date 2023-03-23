@@ -339,6 +339,7 @@ header .menu {
 
 .subjects {
   padding: 2rem;
+  margin-bottom: 4rem;
 }
 .subjects .subject-container {
   display: grid;
@@ -388,6 +389,31 @@ header .menu {
 .subjects .subject-container .subject .info .category span#chemistry {
   background: rgba(255, 105, 180, 0.0745098039);
   color: var(--color3);
+}
+
+.contact {
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  flex-wrap: wrap;
+}
+.contact .img {
+  width: 30rem;
+}
+.contact .content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.contact .content a {
+  background: var(--white);
+  color: var(--primary);
+  margin-bottom: 1rem;
+  width: 100%;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1150px) {
@@ -494,7 +520,7 @@ header .menu {
 @media screen and (max-width: 665px) {
   header .links {
     position: fixed;
-    background: var(--primary);
+    background: var(--white);
     height: 100vh;
     width: 65%;
     padding-top: 4rem;

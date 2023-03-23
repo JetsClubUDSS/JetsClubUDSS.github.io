@@ -171,7 +171,7 @@ header {
       margin-bottom: 6rem;
       justify-content: space-between;
       gap: 2rem;
-      a{
+      a {
          color: var(--black);
       }
       &:nth-child(1) {
@@ -231,6 +231,7 @@ header {
 
 .subjects {
    padding: 2rem;
+   margin-bottom: 4rem;
    .subject-container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -278,6 +279,31 @@ header {
                }
             }
          }
+      }
+   }
+}
+
+.contact {
+   background: var(--primary);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-top: 0 !important;
+   padding-bottom: 0 !important;
+   flex-wrap: wrap;
+   .img {
+      width: 30rem;
+   }
+   .content {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      a {
+         background: var(--white);
+         color: var(--primary);
+         margin-bottom: 1rem;
+         width: 100%;
+         justify-content: center;
       }
    }
 }
