@@ -68,7 +68,6 @@ img {
   background: var(--white);
   color: var(--black);
   font-size: 0.85rem;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -284,6 +283,9 @@ header .menu {
   justify-content: space-between;
   gap: 2rem;
 }
+.about .step a {
+  color: var(--black);
+}
 .about .step:nth-child(1) h2 {
   color: var(--color2);
 }
@@ -434,7 +436,6 @@ header .menu {
     max-width: 100%;
   }
   .guide .img {
-    max-height: -webkit-max-content;
     max-height: -moz-max-content;
     max-height: max-content;
   }
@@ -582,8 +583,7 @@ header .menu {
 }
 @media screen and (max-height: 565px) {
   .home {
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
   }
-}
+}/*# sourceMappingURL=style.css.map */
