@@ -146,17 +146,11 @@ header {
       align-items: center;
       gap: 1rem;
       .btn {
-         &:first-child {
-            background: var(--black);
-            a {
-               color: var(--white);
-            }
-         }
-         &:last-child {
-            background: var(--grey);
-            a {
-               color: var(--black);
-            }
+         background: var(--grey);
+         width: 100%;
+         justify-content: center;
+         a {
+            color: var(--black);
          }
       }
    }
@@ -286,10 +280,10 @@ header {
 .contact {
    background: var(--primary);
    padding: 3rem 2rem 1rem !important;
-   h2{
+   h2 {
       color: var(--white);
    }
-   .main{
+   .main {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -311,7 +305,7 @@ header {
          justify-content: center;
       }
    }
-   .copyright{
+   .copyright {
       color: var(--grey);
       text-align: center;
    }

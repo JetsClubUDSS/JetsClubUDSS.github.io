@@ -261,16 +261,12 @@ header .menu {
   align-items: center;
   gap: 1rem;
 }
-.guide .btns .btn:first-child {
-  background: var(--black);
-}
-.guide .btns .btn:first-child a {
-  color: var(--white);
-}
-.guide .btns .btn:last-child {
+.guide .btns .btn {
   background: var(--grey);
+  width: 100%;
+  justify-content: center;
 }
-.guide .btns .btn:last-child a {
+.guide .btns .btn a {
   color: var(--black);
 }
 
